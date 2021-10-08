@@ -2,13 +2,14 @@
 title: "Talleres  Ciencia de Datos con R."
 author: "Ricardo Alberich"
 output:
+  pdf_document: 
+    number_sections: yes
+    toc: yes
   html_document: 
     number_sections: yes
     toc: yes
     toc_depth: 2
-  pdf_document: 
-    number_sections: yes
-    toc: yes
+    keep_md: yes
 date: ""
 ---
 
@@ -206,7 +207,7 @@ La estética 'stroke' permite modificar el grosor del borde de aquellas figuras 
 #### Solución
 
 
-R entiende el criterio como una división y aplica la estética a aquello que comple la condición impuesta.
+R entiende el criterio como una división y aplica la estética a aquello que cumple la condición impuesta.
 
 ```{r}
 ggplot(data = mpg) +
@@ -1399,7 +1400,7 @@ flights %>% filter(paste(dest, carrier) %in% filter_dest_carrier &
     total_flights = n(),
     total_flights_delayeds = sum(flights_delayeds),
     percent_flights_delayeds = 100 * total_flights_delayeds / total_flights
-  ) %>% arrange(percent_flights_delayeds, total_flights) %>% print(pp, n =20)
+  ) %>% arrange(percent_flights_delayeds, total_flights) %>% print( n =20)
 ```
 
 
